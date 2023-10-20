@@ -11,6 +11,8 @@
 ## Langkah 4
 
 ![l4](/WEEK-05/docs/praktikum-01/langkah4.png)
+![run](/WEEK-05/docs/praktikum-01/run.png)
+![run](/WEEK-05/docs/praktikum-01/run_chr.png)
 
 # Praktikum 3
 
@@ -19,6 +21,7 @@
 ![l1](/WEEK-05/docs/praktikum-03/langkah1.png)
 ![l1](/WEEK-05/docs/praktikum-03/l1.png)
 ![run](/WEEK-05/docs/praktikum-03/run.png)
+![run](/WEEK-05/docs/praktikum-03/run_nama_hp.png)
 
 ## Langkah 2: Image Widget
 
@@ -31,6 +34,41 @@ Lakukan penyesuaian asset pada file pubspec.yaml dan tambahkan file logo di fold
 ![l2](/WEEK-05/docs/praktikum-03/pubspec.png)
 
 JSesuaikan kode dan import di file main.dart kemudian akan tampil gambar seperti berikut.
+
+run:
+
+![3](/WEEK-05/docs/praktikum-03/result_image.png)
+
+Kode di image_widget.dart: telah membuat widget bernama MyImageWidget yang menghasilkan tampilan gambar. Ini menggunakan gambar dengan nama "logo_polinema.png" yang diambil dari aset proyek.
+
+Perubahan di pubspec.yaml: menambahkan file gambar "logo_polinema.png" ke daftar aset yang akan digunakan dalam proyek. Ini adalah langkah penting agar Flutter dapat mengenali dan mengakses gambar tersebut.
+
+Dengan melakukan ini, proyek Flutter telah mempersiapkan untuk menampilkan gambar "logo_polinema.png" menggunakan widget MyImageWidget yang telah buat. Gambar ini dapat digunakan dalam tampilan aplikasi sesuai kebutuhan.
+
+# Praktikum 4
+
+## Langkah 1: Cupertino Button dan Loading Bar
+
+Buat file di basic_widgets > loading_cupertino.dart. Import stateless widget dari material dan cupertino. Lalu isi kode di dalam method Widget build adalah sebagai berikut.
+
+![1](/WEEK-05/docs/praktikum-04/code1.png)
+
+Dengan menambahkan kode ini di dalam file loading_cupertino.dart, sedang membuat sebuah widget Flutter yang menggunakan tampilan gaya iOS (Cupertino) dalam aplikasi.
+
+menggunakan import 'package:flutter/cupertino.dart'; untuk mengimpor pustaka Cupertino Flutter yang diperlukan untuk membuat tampilan gaya iOS.
+membuat sebuah widget bernama MyImageWidget yang menggunakan tampilan Cupertino. Widget ini memuat elemen-elemen seperti tombol (CupertinoButton) dengan teks "Contoh button" dan indikator aktivitas (CupertinoActivityIndicator).
+
+Tampilan tersebut dikelompokkan dalam MaterialApp yang mungkin digunakan untuk menampilkan tampilan Cupertino di dalam aplikasi Flutter dengan tema material (Android-like). Namun, perlu diperhatikan bahwa tampilan ini mungkin lebih sesuai dalam konteks aplikasi iOS atau ketika ingin memberikan pengalaman yang serupa dengan gaya iOS di aplikasi Flutter.
+
+Dengan kode ini, dapat menampilkan tampilan yang sesuai dengan tampilan iOS (Cupertino) dalam aplikasi Flutter untuk menghadirkan pengalaman yang konsisten dengan gaya desain iOS.
+
+## Langkah 2: Floating Action Button (FAB)
+
+![2](/WEEK-05/docs/praktikum-04/code2.png)
+
+## Langkah 3: Scaffold Widget
+
+![1](/WEEK-05/docs/praktikum-04/code3.png)
 
 # Tugas
 
@@ -139,3 +177,23 @@ Save and try the app now. It should generate a new random word pair every time y
 ![2](/WEEK-05/docs/tugas/4/change2.png)
 
 Ini memberikan fungsionalitas ke tombol "Next" yang telah tambahkan sebelumnya. Ini digunakan untuk memanggil metode getNext() yang ada dalam MyAppState ketika tombol "Next" diklik. Dengan demikian, ketika mengklik tombol "Next", kata acak yang ditampilkan pada aplikasi akan diperbarui ke kata acak baru, meningkatkan interaktivitas aplikasi.
+
+## Make the App Prettier
+
+rewrite the MyHomePage widget as follows:
+
+![1](/WEEK-05/docs/tugas/MakeTheAppPrettier/code1.png)
+
+Dengan perubahan yang dilakukan pada widget MyHomePage di dalam lib/main.dart, dilakukan memodifikasi cara tampilan kata acak ditampilkan dalam aplikasi.
+
+Menghapus penggunaan StatefulWidget dan \_MyHomePageState yang ada sebelumnya dan menggantinya dengan widget MyHomePage yang sekarang menjadi StatelessWidget. Ini menghilangkan kompleksitas pengelolaan keadaan internal.
+
+Menggunakan context.watch<MyAppState>() untuk mendapatkan akses ke MyAppState. Kemudian, Anda mendapatkan pasangan kata acak dengan var pair = appState.current;.
+
+Dalam tampilan, Anda menampilkan kata acak dari pair dengan metode asLowerCase, sehingga kata acak akan ditampilkan dalam huruf kecil.
+
+Tombol "Next" masih ada dan masih memanggil appState.getNext() ketika diklik, sehingga kata acak akan diperbarui ketika tombol tersebut diklik.
+
+Jadi, perubahan ini memodifikasi bagian tampilan yang menampilkan kata acak agar ditampilkan dalam huruf kecil, dan juga mengubah widget MyHomePage menjadi StatelessWidget untuk lebih sederhana.
+
+![q](/WEEK-05/docs/tugas/MakeTheAppPrettier/code2.png)
