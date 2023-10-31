@@ -19,3 +19,7 @@
 ![w](/WEEK-08/docs/prak1/7.png)
 
 ![w](/WEEK-08/docs/prak1/7_result.png)
+
+# Tugas
+
+![2](/WEEK-08/docs/tugas/result.png)
