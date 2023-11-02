@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class MyImageWidget extends StatelessWidget {
-  const MyImageWidget({Key? key}) : super(key: key);
+class ButtonCupertinoWidget extends StatelessWidget {
+  const ButtonCupertinoWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

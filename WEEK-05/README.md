@@ -11,8 +11,7 @@
 ## Langkah 4
 
 ![l4](/WEEK-05/docs/praktikum-01/langkah4.png)
-![run](/WEEK-05/docs/praktikum-01/run.png)
-![run](/WEEK-05/docs/praktikum-01/run_chr.png)
+![r](/WEEK-05/docs/praktikum-01/result.png)
 
 # Praktikum 3
 
@@ -37,13 +36,15 @@ JSesuaikan kode dan import di file main.dart kemudian akan tampil gambar seperti
 
 run:
 
-![3](/WEEK-05/docs/praktikum-03/result_image.png)
+![r](/WEEK-05/docs/praktikum-03/result.png)
 
 Kode di image_widget.dart: telah membuat widget bernama MyImageWidget yang menghasilkan tampilan gambar. Ini menggunakan gambar dengan nama "logo_polinema.png" yang diambil dari aset proyek.
 
 Perubahan di pubspec.yaml: menambahkan file gambar "logo_polinema.png" ke daftar aset yang akan digunakan dalam proyek. Ini adalah langkah penting agar Flutter dapat mengenali dan mengakses gambar tersebut.
 
 Dengan melakukan ini, proyek Flutter telah mempersiapkan untuk menampilkan gambar "logo_polinema.png" menggunakan widget MyImageWidget yang telah buat. Gambar ini dapat digunakan dalam tampilan aplikasi sesuai kebutuhan.
+
+![a](/WEEK-05/docs/praktikum-03/result_image.png)
 
 # Praktikum 4
 
@@ -68,7 +69,21 @@ Dengan kode ini, dapat menampilkan tampilan yang sesuai dengan tampilan iOS (Cup
 
 ## Langkah 3: Scaffold Widget
 
-![1](/WEEK-05/docs/praktikum-04/code3.png)
+![1](/WEEK-05/docs/praktikum-04/result.png)
+
+## Dialog Widget
+
+![](/WEEK-05/docs/praktikum-04/dialog.png)
+
+## input
+
+![](/WEEK-05/docs/praktikum-04/input.png)
+
+## Date Time
+
+![](/WEEK-05/docs/praktikum-04/date_time1.png)
+
+![](/WEEK-05/docs/praktikum-04/date_time2.png)
 
 # Tugas
 
@@ -197,3 +212,7 @@ Tombol "Next" masih ada dan masih memanggil appState.getNext() ketika diklik, se
 Jadi, perubahan ini memodifikasi bagian tampilan yang menampilkan kata acak agar ditampilkan dalam huruf kecil, dan juga mengubah widget MyHomePage menjadi StatelessWidget untuk lebih sederhana.
 
 ![q](/WEEK-05/docs/tugas/MakeTheAppPrettier/code2.png)
+
+## End Result
+
+![](/WEEK-05/docs/tugas/final_result.gif)
