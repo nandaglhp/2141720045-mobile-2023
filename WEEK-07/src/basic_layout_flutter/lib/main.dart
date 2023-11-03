@@ -1,3 +1,17 @@
+// import 'package:basic_layout_flutter/widget/row_column.dart';
+import 'package:basic_layout_flutter/widget/axis_size.dart';
+// import 'package:basic_layout_flutter/widget/axis_alignment.dart';
+// import 'package:basic_layout_flutter/widget/cross_axis_alignment.dart';
+// import 'package:basic_layout_flutter/widget/fit_properties.dart';
+// import 'package:basic_layout_flutter/widget/flex_values.dart';
+// import 'package:basic_layout_flutter/widget/extra_space.dart';
+// import 'package:basic_layout_flutter/widget/resizing.dart';
+// import 'package:basic_layout_flutter/widget/space.dart';
+// import 'package:basic_layout_flutter/widget/more_space.dart';
+// import 'package:basic_layout_flutter/widget/text.dart';
+// import 'package:basic_layout_flutter/widget/icon.dart';
+// import 'package:basic_layout_flutter/widget/image.dart';
+// import 'package:basic_layout_flutter/widget/personal.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -105,9 +119,20 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+            // const RowColumnWidget(),
+            const AxisSizeWidget(),
+            // const AxisAlignmentWidget(),
+            // const CrossAxisAlignmentWidget(),
+            // const FitPropertiesWidget(),
+            // const FlexValuesWidget(),
+            // const ExtraSpaceWidget(),
+            // const ResizingWidget(),
+            // const SpaceWidget(),
+            // const MoreSpaceWidget(),
+            // const TextWidget(),
+            // const IconWidget(),
+            // const ImageWidget(),
+            // const PersonalWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,

@@ -1,25 +1,45 @@
-# Praktikum 1
+# praktikum 1
 
-![w](/WEEK-08/docs/prak1/1.png)
+![](/WEEK-07/docs/praktikum1/01.png)
 
-![w](/WEEK-08/docs/prak1/2.png)
+# praktikum 2
 
-![w](/WEEK-08/docs/prak1/2.2.png)
+![](/WEEK-07/docs/praktikum1/02.png)
 
-![w](/WEEK-08/docs/prak1/3.png)
+# praktikum 3
 
-![w](/WEEK-08/docs/prak1/4.png)
+![](/WEEK-07/docs/prak3/result.png)
 
-![w](/WEEK-08/docs/prak1/5.png)
+# praktikum 4
 
-![w](/WEEK-08/docs/prak1/6.png)
-
-![w](/WEEK-08/docs/prak1/6_result.png)
-
-![w](/WEEK-08/docs/prak1/7.png)
-
-![w](/WEEK-08/docs/prak1/7_result.png)
+![](/WEEK-07/docs/result.png)
 
 # Tugas
 
-![2](/WEEK-08/docs/tugas/result.png)
+| Penggunaan Row                                                | Penggunaan Column                          |
+| ------------------------------------------------------------- | ------------------------------------------ |
+| ![Screenshot flutter](/WEEK-07/docs/tugas/row_column/row.png) | ![](/WEEK-07/docs/tugas/row_column/01.png) |
+
+| Penggunaan Min                                            | Penggunaan Max                          |
+| --------------------------------------------------------- | --------------------------------------- |
+| ![Screenshot flutter](/WEEK-07/docs/tugas/maxmin/min.png) | ![](/WEEK-07/docs/tugas/maxmin/max.png) |
+
+| Penggunaan start                                              | Penggunaan end                             |
+| ------------------------------------------------------------- | ------------------------------------------ |
+| ![Screenshot flutter](/WEEK-07/docs/tugas/row_column/row.png) | ![](/WEEK-07/docs/tugas/start_end/end.png) |
+
+| Penggunaan center                                                  | Penggunaan start                                |
+| ------------------------------------------------------------------ | ----------------------------------------------- |
+| ![Screenshot flutter](/WEEK-07/docs/tugas/center_start/center.png) | ![](/WEEK-07/docs/tugas/center_start/start.png) |
+
+| Penggunaan loose                                                 | Penggunaan tight                               |
+| ---------------------------------------------------------------- | ---------------------------------------------- |
+| ![Screenshot flutter](/WEEK-07/docs/tugas/loose_tight/loose.png) | ![](/WEEK-07/docs/tugas/loose_tight/right.png) |
+
+| Penggunaan values 1                                     | Penggunaan values 2                   |
+| ------------------------------------------------------- | ------------------------------------- |
+| ![Screenshot flutter](/WEEK-07/docs/tugas/values/1.png) | ![](/WEEK-07/docs/tugas/values/2.png) |
+
+| Penggunaan default                                      | Penggunaan expanded                   |
+| ------------------------------------------------------- | ------------------------------------- |
+| ![Screenshot flutter](/WEEK-07/docs/tugas/values/1.png) | ![](/WEEK-07/docs/tugas/values/2.png) |
