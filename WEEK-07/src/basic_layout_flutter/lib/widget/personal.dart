@@ -22,10 +22,10 @@ class PersonalWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Raden Rizki',
+                  'Ananda Galih Pratiwi',
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
-                const Text('Experienced Web Developer'),
+                const Text('Frontend Web Developer'),
               ],
             )
           ],
@@ -36,8 +36,8 @@ class PersonalWidget extends StatelessWidget {
         const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Doko, Blitar'),
-            Text('0857-8465-9725'),
+            Text('Dau, Malang'),
+            Text('0813-5701-9976'),
           ],
         ),
         const SizedBox(

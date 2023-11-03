@@ -1,5 +1,5 @@
 // import 'package:basic_layout_flutter/widget/row_column.dart';
-import 'package:basic_layout_flutter/widget/axis_size.dart';
+// import 'package:basic_layout_flutter/widget/axis_size.dart';
 // import 'package:basic_layout_flutter/widget/axis_alignment.dart';
 // import 'package:basic_layout_flutter/widget/cross_axis_alignment.dart';
 // import 'package:basic_layout_flutter/widget/fit_properties.dart';
@@ -11,7 +11,7 @@ import 'package:basic_layout_flutter/widget/axis_size.dart';
 // import 'package:basic_layout_flutter/widget/text.dart';
 // import 'package:basic_layout_flutter/widget/icon.dart';
 // import 'package:basic_layout_flutter/widget/image.dart';
-// import 'package:basic_layout_flutter/widget/personal.dart';
+import 'package:basic_layout_flutter/widget/personal.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // const RowColumnWidget(),
-            const AxisSizeWidget(),
+            // const AxisSizeWidget(),
             // const AxisAlignmentWidget(),
             // const CrossAxisAlignmentWidget(),
             // const FitPropertiesWidget(),
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // const TextWidget(),
             // const IconWidget(),
             // const ImageWidget(),
-            // const PersonalWidget(),
+            const PersonalWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
