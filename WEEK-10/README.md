@@ -70,9 +70,9 @@ RESULT
 
 # Penjelasan tiap parameter yang ada di dalam plugin auto_size_text
 
-1. key: mengidentifikasi widget ini dalam pohon widget. Ini digunakan untuk manajemen state dan pengujian widget.
+1. key: mengidentifikasi widget ini dalam pohon widget, untuk manajemen state dan pengujian widget.
 
-2. textKey: mengidentifikasi teks yang akan diubah ukuran fontnya dalam widget. Ini memungkinkan Anda untuk mengendalikan ukuran font teks yang spesifik dalam widget.
+2. textKey: mengidentifikasi teks yang akan diubah ukuran fontnya dalam widget, untuk mengendalikan ukuran font teks yang spesifik dalam widget.
 
 3. style: objek TextStyle yang digunakan untuk menentukan gaya teks, seperti warna, ukuran font, dll.
 
@@ -80,9 +80,9 @@ RESULT
 
 5. maxFontSize: menentukan ukuran font maksimum yang akan digunakan. Jika teks perlu membesar, ukuran font tidak akan lebih dari nilai ini.
 
-6. stepGranularity: menentukan langkah inkremental untuk penyesuaian ukuran font. Ini memungkinkan Anda untuk mengontrol seberapa halus perubahan ukuran font.
+6. stepGranularity: menentukan langkah inkremental untuk penyesuaian ukuran font, untuk mengontrol seberapa halus perubahan ukuran font.
 
-7. presetFontSizes: daftar ukuran font yang telah ditentukan sebelumnya. Ini dapat digunakan untuk membatasi ukuran font yang tersedia dalam penyesuaian otomatis.
+7. presetFontSizes: daftar ukuran font yang telah ditentukan sebelumnya, dapat digunakan untuk membatasi ukuran font yang tersedia dalam penyesuaian otomatis.
 
 8. group: mengelompokkan beberapa widget AutoSizeText bersama. Ketika sekelompok widget ini diubah ukuran fontnya, mereka akan berbagi pengaturan ukuran font yang sama.
 
@@ -96,7 +96,7 @@ RESULT
 
 13. wrapWords: menentukan apakah teks harus memecah kata jika tidak cukup ruang.
 
-14. overflow: Parameter overflow menentukan bagaimana teks akan dipotong jika melebihi batas ukuran yang ditentukan. Pilihan umum adalah TextOverflow.ellipsis untuk menampilkan titik elipsis jika teks terpotong.
+14. overflow: Parameter overflow menentukan bagaimana teks akan dipotong jika melebihi batas ukuran yang ditentukan.
 
 15. overflowReplacement: widget yang akan digunakan sebagai pengganti teks yang terpotong jika menggunakan overflow.
 
