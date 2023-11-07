@@ -72,3 +72,9 @@ Kita akan buat widget berupa List yang dapat dilakukan scroll, yaitu ListView.bu
 Langkah 9: buat widget \_buildTaskTile
 
 Dari langkah 8, kita butuh ListTile untuk menampilkan setiap nilai dari plan.tasks. Kita buat dinamis untuk setiap index data, sehingga membuat view menjadi lebih mudah. Tambahkan kode berikut ini.
+
+![](/WEEK-11/docs/praktikum-01/langkah-09.png)
+
+Result GIF
+
+![](/WEEK-11/docs/praktikum-01/langkah-09-result.gif)
