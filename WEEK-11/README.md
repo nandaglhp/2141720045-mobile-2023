@@ -48,3 +48,9 @@ Langkah 7: buat method \_buildAddTaskButton()
 Anda akan melihat beberapa error di langkah 6, karena method yang belum dibuat. Ayo kita buat mulai dari yang paling mudah yaitu tombol Tambah Rencana. Tambah kode berikut di bawah method build di dalam class \_PlanScreenState.
 
 ![](/WEEK-11/docs/praktikum-01/langkah-07.png)
+
+Langkah 8: buat widget \_buildList()
+
+Kita akan buat widget berupa List yang dapat dilakukan scroll, yaitu ListView.builder. Buat widget ListView seperti kode berikut ini.
+
+![](/WEEK-11/docs/praktikum-01/langkah-08.png)
