@@ -42,3 +42,9 @@ Langkah 6: buat plan_screen.dart
 Pada folder views, buatlah sebuah file plan_screen.dart dan gunakan templat StatefulWidget untuk membuat class PlanScreen. Isi kodenya adalah sebagai berikut. Gantilah teks ‘Namaku' dengan nama panggilan Anda pada title AppBar.
 
 ![](/WEEK-11/docs/praktikum-01/langkah-06.png)
+
+Langkah 7: buat method \_buildAddTaskButton()
+
+Anda akan melihat beberapa error di langkah 6, karena method yang belum dibuat. Ayo kita buat mulai dari yang paling mudah yaitu tombol Tambah Rencana. Tambah kode berikut di bawah method build di dalam class \_PlanScreenState.
+
+![](/WEEK-11/docs/praktikum-01/langkah-07.png)
