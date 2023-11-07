@@ -24,3 +24,9 @@ Langkah 3: Buat file plan.dart
 Kita juga perlu sebuah List untuk menyimpan daftar rencana dalam aplikasi to-do ini. Buat file plan.dart di dalam folder models dan isi kode seperti berikut.
 
 ![](/WEEK-11/docs/praktikum-01/langkah-03.png)
+
+Langkah 4: Buat file data_layer.dart
+
+Kita dapat membungkus beberapa data layer ke dalam sebuah file yang nanti akan mengekspor kedua model tersebut. Dengan begitu, proses impor akan lebih ringkas seiring berkembangnya aplikasi. Buat file bernama data_layer.dart di folder models. Kodenya hanya berisi export seperti berikut.
+
+![](/WEEK-11/docs/praktikum-01/langkah-04.png)
