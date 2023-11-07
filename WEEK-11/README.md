@@ -36,3 +36,9 @@ Langkah 5: Pindah ke file main.dart
 Ubah isi kode main.dart sebagai berikut
 
 ![](/WEEK-11/docs/praktikum-01/langkah-05.png)
+
+Langkah 6: buat plan_screen.dart
+
+Pada folder views, buatlah sebuah file plan_screen.dart dan gunakan templat StatefulWidget untuk membuat class PlanScreen. Isi kodenya adalah sebagai berikut. Gantilah teks ‘Namaku' dengan nama panggilan Anda pada title AppBar.
+
+![](/WEEK-11/docs/praktikum-01/langkah-06.png)
