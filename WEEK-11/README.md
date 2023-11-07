@@ -30,3 +30,9 @@ Langkah 4: Buat file data_layer.dart
 Kita dapat membungkus beberapa data layer ke dalam sebuah file yang nanti akan mengekspor kedua model tersebut. Dengan begitu, proses impor akan lebih ringkas seiring berkembangnya aplikasi. Buat file bernama data_layer.dart di folder models. Kodenya hanya berisi export seperti berikut.
 
 ![](/WEEK-11/docs/praktikum-01/langkah-04.png)
+
+Langkah 5: Pindah ke file main.dart
+
+Ubah isi kode main.dart sebagai berikut
+
+![](/WEEK-11/docs/praktikum-01/langkah-05.png)
