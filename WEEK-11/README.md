@@ -13,6 +13,14 @@ Buatlah sebuah project flutter baru dengan nama master_plan di folder src week-1
 
 Langkah 2: Membuat model task.dart
 
+Praktik terbaik untuk memulai adalah pada lapisan data (data layer). Ini akan memberi Anda gambaran yang jelas tentang aplikasi Anda, tanpa masuk ke detail antarmuka pengguna Anda. Di folder model, buat file bernama task.dart dan buat class Task. Class ini memiliki atribut description dengan tipe data String dan complete dengan tipe data Boolean, serta ada konstruktor. Kelas ini akan menyimpan data tugas untuk aplikasi kita. Tambahkan kode berikut:
+
 ![](/WEEK-11/docs/praktikum-01/langkah-02.png)
 
 ![](/WEEK-11/docs/praktikum-01/langkah-02-kode.png)
+
+Langkah 3: Buat file plan.dart
+
+Kita juga perlu sebuah List untuk menyimpan daftar rencana dalam aplikasi to-do ini. Buat file plan.dart di dalam folder models dan isi kode seperti berikut.
+
+![](/WEEK-11/docs/praktikum-01/langkah-03.png)
