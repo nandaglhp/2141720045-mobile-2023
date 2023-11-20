@@ -176,3 +176,25 @@ Penjelasan :
 Pada Langkah 9, dalam aplikasi master_plan, fungsionalitas telah ditambahkan untuk menampilkan status mengenai berapa banyak tugas yang sudah diselesaikan (checked) dari keseluruhan tugas yang telah dibuat atau ditambahkan sebelumnya.
 
 Implementasi ini melibatkan penggunaan dua method yang telah ditambahkan pada model class Plan, yaitu completedCount dan completenessMessage. Method-method ini digunakan untuk menghitung jumlah tugas yang telah diselesaikan dan untuk memberikan informasi keseluruhan tentang kemajuan tugas-tugas.
+
+# Praktikum 3
+
+final result:
+
+![](/WEEK-11/docs/praktikum-03/final_result.gif)
+
+Penjelasan :
+
+Master Plans memiliki kemampuan untuk membuat daftar rencana (plan) yang memiliki fungsi untuk menambahkan dan mengelola tugas-tugas terkait. Dimana pengguna dapat menambahkan, mengedit, dan menghapus tugas dalam setiap rencana.
+
+Hal yang baru adalah integrasi antara dua layar utama: PlanScreen dan PlanCreatorScreen. Ketika pengguna melakukan tindakan check (penandaan selesai) pada tugas di PlanScreen, informasi dan status tugas yang telah diperbarui akan secara otomatis terpantau dan tercermin di PlanCreatorScreen. Misalnya, jika pengguna menyelesaikan suatu tugas pada PlanScreen, status penyelesaian dan informasi mengenai tugas yang telah diselesaikan akan diperbarui secara langsung pada PlanCreatorScreen. Lebih lanjut, informasi yang ditampilkan pada kedua layar tersebut akan saling sinkron meskipun nilai atau status dari tugas-tugas tersebut dapat berbeda di dalam daftar rencana di PlanCreatorScreen.
+
+Integrasi yang disajikan pada tahap ini memungkinkan pengguna untuk memiliki visibilitas yang konsisten terhadap kemajuan tugas-tugas yang dilakukan. Pengguna dapat memantau dan mengelola tugas pada layar utama (PlanScreen) dan melihat perubahan yang terjadi pada layar yang memberikan kemampuan pengelolaan lebih detail (PlanCreatorScreen). Dengan kata lain, dua layar tersebut saling berkomunikasi dan menyediakan pembaruan data secara real-time.
+
+Penjelasan gambar diagram :
+
+Pertama-tama, aplikasi akan memulai dengan menampilkan objek PlanProvider, yang bertanggung jawab untuk menampilkan layar PlanCreatorScreen. Di layar ini, pengguna memiliki kemampuan untuk menambahkan rencana atau "plan" baru dengan cara memasukkan judul atau teks plan. Ketika pengguna menekan tombol "enter" atau tombol yang sesuai, rencana tersebut akan ditambahkan ke dalam daftar rencana yang ada.
+
+Selanjutnya, ketika pengguna memilih salah satu rencana dari daftar, aplikasi akan membimbing mereka menuju halaman PlanScreen, yang telah dikembangkan pada praktikum sebelumnya. Di halaman ini, pengguna memiliki kemampuan untuk menambahkan daftar tugas baru. Setiap tugas dapat diberi deskripsi teks, dan pengguna dapat menandai tugas tersebut sebagai sudah selesai dengan melakukan tindakan "check" pada tugas tersebut.
+
+Perubahan yang paling signifikan adalah bahwa status keseluruhan dari tugas-tugas yang sudah selesai akan diperbarui secara otomatis. Baik itu pada layar PlanScreen maupun di PlanCreatorScreen. Dengan kata lain, ketika pengguna menandai tugas sebagai sudah selesai di PlanScreen, perubahan status ini akan tercermin secara real-time di PlanCreatorScreen. Hal ini memberikan kesinambungan informasi mengenai kemajuan tugas-tugas yang sudah diselesaikan dalam aplikasi, baik di tingkat rencana maupun di tingkat tugas secara terperinci.
