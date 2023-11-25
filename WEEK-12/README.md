@@ -12,6 +12,10 @@ Langkah 4: Tambah method getData()
 
 ![](/WEEK-12/docs/praktikum-01/gadis_kretek_JSON.png)
 
+Soal 2:
+
+![](/WEEK-12/docs/praktikum-01/soal2.gif)
+
 Soal 3:
 
 Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
