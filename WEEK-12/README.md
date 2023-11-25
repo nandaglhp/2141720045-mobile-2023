@@ -18,6 +18,8 @@ Soal 2:
 
 Soal 3:
 
+![](/WEEK-12/docs/praktikum-01/soal3.png)
+
 Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
 
 1. substring(0, 450): Bagian ini menggunakan metode substring() untuk mengambil potongan string dari hasil data yang diterima. Metode ini memiliki dua parameter, yaitu 0 dan 450. Parameter pertama (0) adalah indeks awal dari string, dan parameter kedua (450) adalah indeks akhir (eksklusif). Dalam hal ini, potongan string yang diambil dimulai dari indeks 0 hingga sebelum indeks 450. Ini berarti kode tersebut mengambil karakter dari indeks 0 sampai dengan karakter ke-449 dari hasil data yang diterima.
