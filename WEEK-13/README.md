@@ -19,3 +19,7 @@ Implementasi dari kelas ColorStream. Kelas ini memiliki beberapa fungsi dan prop
 - getColors(): Sebuah method yang mengembalikan sebuah Stream dari tipe Color. Method ini menggunakan Stream.periodic untuk membuat sebuah stream yang mengirimkan warna dari list colors setiap detiknya.
 
 - Stream.periodic: Membuat stream yang mengeluarkan nilai secara periodik berdasarkan interval waktu yang ditentukan.
+
+Soal 4:
+
+![](/WEEK-13/docs/soal4.gif)
