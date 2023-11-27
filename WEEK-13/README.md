@@ -97,3 +97,34 @@ Penjelasan langkah 3:
 Untuk mengambil nilai dari stream, mengubahnya menggunakan transformer, dan memperbarui lastNumber dalam state widget berdasarkan nilai yang diterima dari stream. Jika terjadi kesalahan dalam stream, maka nilai lastNumber akan diatur menjadi -1.
 
 Perbedaan utama antara menggunakan stream.transform().listen() dan stream.listen() adalah bahwa dengan menggunakan transform() dapat menerapkan transformasi data sebelum data tersebut disalurkan ke listen(). Ini memungkinkan untuk mengubah atau memanipulasi data yang diterima sebelum menggunakan atau menampilkan data.
+
+Soal 9:
+
+![](/WEEK-13/docs/soal9.gif)
+
+![](/WEEK-13/docs/OnDone.png)
+
+Penjelasan kode langkah 2:
+
+Secara keseluruhan, potongan kode initState() ini bertanggung jawab untuk menginisialisasi aliran data (stream), membuat langganan ke aliran tersebut, dan memperbarui nilai yang ditampilkan di UI (lastNumber) setiap kali ada peristiwa (event) baru yang dikirim melalui aliran data.
+
+kode yang baru saja diubah bertujuan untuk mengamati (listen) perubahan yang terjadi pada suatu stream data.
+
+Pada bagian tersebut, terdapat inisialisasi subscription yang dibuat dari stream.listen. Ini menciptakan suatu langganan (subscription) ke stream yang telah didefinisikan sebelumnya (Stream stream = numberStreamController.stream;). Ketika ada event baru yang diterima di dalam stream, fungsi yang diberikan pada listen akan dijalankan.
+
+Penjelasan langkah 6:
+
+subscription.cancel() adalah perintah yang menghentikan langganan atau subscription terhadap sebuah Stream. Method cancel() digunakan untuk membatalkan langganan yang telah dibuat terhadap suatu Stream.
+
+subscription.cancel() digunakan untuk memastikan bahwa langganan terhadap Stream yang terjadi pada initState() sudah dihentikan atau dibersihkan ketika stateful widget tidak lagi digunakan atau dihapus dari tree widget.
+
+Penjelasan langkah 8:
+
+fungsi addRandomNumber() bertugas untuk menambahkan bilangan acak ke dalam stream jika stream controller masih aktif, dan jika tidak, variabel lastNumber di-set menjadi -1 untuk menandakan adanya kesalahan karena stream controller telah ditutup.
+
+terdapat operasi kondisional. Jika stream controller (numberStreamController) belum ditutup (artinya masih aktif), maka:
+
+- numberStream.addNumberToSink(myNum);: Fungsi addNumberToSink() dipanggil pada objek numberStream untuk menambahkan bilangan yang telah di-generate (myNum) ke dalam sink (saluran) stream.
+  Jika stream controller sudah ditutup, maka kondisi else akan dieksekusi:
+
+- setState(() { lastNumber = -1; });: Mengeset nilai variabel lastNumber menjadi -1. Ini karena stream controller telah ditutup, sehingga tidak dapat menambahkan bilangan baru ke dalam stream.
