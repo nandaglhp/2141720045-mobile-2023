@@ -68,3 +68,32 @@ Jelaskan maksud kode langkah 15:
 Komentar "// int myNum = random.nextInt(10);" digunakan untuk menunjukkan bahwa baris kode di bawahnya, yang menghasilkan angka acak dan menambahkannya ke NumberStream, tidak lagi digunakan.
 
 Metode numberStream.addError() digunakan untuk menambahkan kesalahan ke Stream.
+
+soal 8:
+
+![](/WEEK-13/docs/soal8.gif)
+
+Penjelasan fungsi kode langkah 1:
+
+Mendeklarasikan variabel transformer sebagai sebuah objek yang merupakan instance dari kelas StreamTransformer. Kata kunci late digunakan untuk menandakan bahwa nilai variabel transformer akan diinisialisasi nanti, bukan pada saat deklarasi variabel tersebut.
+
+StreamTransformer adalah objek yang digunakan untuk mengubah nilai yang melewati suatu Stream sebelum nilai tersebut dikonsumsi atau diproses lebih lanjut. Streamformer digunakan untuk mengubah nilai yang melewati stream sebelum nilai tersebut diteruskan ke setState yang akan memperbarui tampilan dengan nilai yang telah diubah.
+
+Penjelasan langkah 2:
+
+Untuk membuat objek StreamTransformer. Ini digunakan untuk mentransformasi atau mengubah data yang melewati suatu Stream.
+
+- StreamTransformer: StreamTransformer<int, int> mendefinisikan transformer untuk stream yang mengambil tipe data input int dan mengeluarkan tipe data output int.
+- fromHandlers: Metode statis yang digunakan untuk membuat StreamTransformer berdasarkan handlers yang diberikan.
+
+  - handleData: Merupakan bagian yang mengatur bagaimana data yang diterima akan diubah. Setiap data yang diterima akan dikalikan dengan 10 (sink.add(value \* 10)), dan hasilnya akan diteruskan ke dalam stream.
+
+  - handleError: Ketika terjadi kesalahan di dalam stream, handler ini akan menangani penanganan error. Dalam kode, jika ada error, misalnya ketika tidak dapat mengubah nilai ke tipe data yang diharapkan, -1 akan ditambahkan ke dalam stream.
+
+  - handleDone: Handler yang dipanggil ketika stream telah selesai. Pada kode ini, handler ini hanya bertugas menutup sink atau mengakhiri stream (sink.close()).
+
+Penjelasan langkah 3:
+
+Untuk mengambil nilai dari stream, mengubahnya menggunakan transformer, dan memperbarui lastNumber dalam state widget berdasarkan nilai yang diterima dari stream. Jika terjadi kesalahan dalam stream, maka nilai lastNumber akan diatur menjadi -1.
+
+Perbedaan utama antara menggunakan stream.transform().listen() dan stream.listen() adalah bahwa dengan menggunakan transform() dapat menerapkan transformasi data sebelum data tersebut disalurkan ke listen(). Ini memungkinkan untuk mengubah atau memanipulasi data yang diterima sebelum menggunakan atau menampilkan data.
