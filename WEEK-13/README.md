@@ -48,3 +48,23 @@ Metode addRandomNumber() untuk menambahkan angka acak baru ke NumberStream. Dala
 
 - Membuat objek Random dan menghasilkan angka acak.
 - Memanggil metode addNumberToSink() pada NumberStream untuk menambahkan angka acak ke Stream.
+
+Soal 7:
+
+![](/WEEK-13/docs/soal7.png)
+
+Jelaskan maksud kode langkah 13:
+
+etode addError() dalam kelas NumberStream digunakan untuk menambahkan kesalahan ke Stream. Kesalahan ini akan diterima oleh pendengar Stream menggunakan metode onError.
+
+Stream akan mencetak kesalahan 'Error: Null number received' dan menambahkan kesalahan 'Null number received' ke Stream.
+
+Jelaskan maksud kode langkah 14:
+
+Kode digunakan untuk menangani kesalahan yang terjadi pada Stream. Jika kesalahan terjadi, kode ini akan memperbarui state lastNumber menjadi -1 untuk menunjukkan bahwa kesalahan telah terjadi. kesalahan dapat terjadi jika metode addRandomNumber() memanggil metode addError() pada NumberStream. Metode addError() digunakan untuk menambahkan kesalahan buatan ke Stream.
+
+Jelaskan maksud kode langkah 15:
+
+Komentar "// int myNum = random.nextInt(10);" digunakan untuk menunjukkan bahwa baris kode di bawahnya, yang menghasilkan angka acak dan menambahkannya ke NumberStream, tidak lagi digunakan.
+
+Metode numberStream.addError() digunakan untuk menambahkan kesalahan ke Stream.
