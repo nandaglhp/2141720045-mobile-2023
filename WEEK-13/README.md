@@ -29,3 +29,22 @@ Soal 5:
 Perbedaan utama antara listen dan await for adalah bahwa listen digunakan untuk menangani data dari Stream secara real time, sedangkan await for untuk menunggu secara asinkron untuk data baru dari Stream.
 
 Secara umum, listen digunakan jika ingin menangani data dari Stream secara real time. Lalu menggunakan await for jika ingin menunggu secara asinkron untuk data baru dari Stream.
+
+Soal 6:
+
+![](/WEEK-13/docs/soal6.gif)
+
+Jelaskan maksud kode langkah 8:
+
+Metode initState() dipanggil saat aplikasi pertama kali dimulai. Dalam metode initState(), kode berikut ini dijalankan:
+
+- Membuat objek NumberStream.
+- Membuat objek StreamController dan menghubungkannya ke NumberStream.
+- Mendengarkan event dari StreamController dan memperbarui state lastNumber setiap kali event diterima.
+
+Jelaskan maksud kode langkah 10:
+
+Metode addRandomNumber() untuk menambahkan angka acak baru ke NumberStream. Dalam metode addRandomNumber(), kode berikut ini dijalankan:
+
+- Membuat objek Random dan menghasilkan angka acak.
+- Memanggil metode addNumberToSink() pada NumberStream untuk menambahkan angka acak ke Stream.
