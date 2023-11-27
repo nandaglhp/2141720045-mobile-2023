@@ -23,3 +23,9 @@ Implementasi dari kelas ColorStream. Kelas ini memiliki beberapa fungsi dan prop
 Soal 4:
 
 ![](/WEEK-13/docs/soal4.gif)
+
+Soal 5:
+
+Perbedaan utama antara listen dan await for adalah bahwa listen digunakan untuk menangani data dari Stream secara real time, sedangkan await for untuk menunggu secara asinkron untuk data baru dari Stream.
+
+Secara umum, listen digunakan jika ingin menangani data dari Stream secara real time. Lalu menggunakan await for jika ingin menunggu secara asinkron untuk data baru dari Stream.
