@@ -146,3 +146,39 @@ Jelaskan mengapa hal itu bisa terjadi ?
 Hal ini terjadi karena pada saat inisialisasi, dua buah subscription dibuat pada Stream.listen:
 
 Kedua subscription tersebut akan menambahkan nilai angka ke dalam string values ketika event dari stream diterima. Ketika tombol 'New Random Number' ditekan, addRandomNumber() dipanggil dan nilai acak baru ditambahkan ke numberStream. Ini menyebabkan dua langganan tersebut menerima event dari stream dan keduanya akan memperbarui nilai values. Oleh karena itu, setiap kali tombol 'New Random Number' ditekan, setiap langganan akan menambahkan nilai angka ke dalam values, mengakibatkan tampilannya bertambah dua kali lipat dari seharusnya.
+
+Soal 12:
+
+![](/WEEK-13/docs/soal12.gif)
+
+Penjelasan langkah 3:
+
+- Stream.periodic: untuk membuat sebuah stream yang mengeluarkan item pada interval waktu tertentu. Di sini, stream dibuat dengan interval setiap 1 detik (const Duration(seconds: 1)).
+
+- Async Generator (async*): async* menandakan bahwa method getNumbers() merupakan sebuah async generator. Ini memungkinkan penggunaan pernyataan yield\* untuk menghasilkan nilai secara bertahap tanpa memblokir eksekusi.
+
+- Random Number Generation: Di dalam perulangan stream, digunakan objek dari kelas Random untuk menghasilkan bilangan acak antara 0 hingga 9 menggunakan random.nextInt(10).
+
+- yield\*: Ini menghasilkan nilai-nilai yang diperoleh dari Stream.periodic secara bertahap sebagai elemen-elemen dari stream yang dikembalikan oleh getNumbers().
+
+Kode ini menghasilkan sebuah stream yang akan mengeluarkan bilangan bulat acak dari 0 hingga 9 setiap detiknya. Stream tersebut dapat digunakan untuk mengambil nilai-nilai tersebut di dalam widget StreamBuilder yang terdapat di dalam kode main.dart
+
+Penjelasan langkah 7:
+
+- StreamBuilder Widget: UI berdasarkan data yang diterima dari sebuah Stream.
+
+- stream: numberStream: stream yang diberikan ke StreamBuilder untuk memonitor perubahan data.
+
+- initialData: 0: nilai awal yang diberikan kepada snapshot sebelum data dari stream tiba. Di sini, jika tidak ada data yang diterima dari stream, snapshot.data akan berisi nilai awal yaitu 0.
+
+- builder: (context, snapshot) { ... }: callback yang akan dipanggil setiap kali ada perubahan data pada stream yang dimonitor.
+
+- snapshot.hasError: properti dari AsyncSnapshot yang menunjukkan apakah terjadi error pada stream atau tidak. Jika terjadi error, kondisi ini akan bernilai true, dan pesan error dapat ditangani di dalam blok kode yang bersangkutan.
+
+- snapshot.hasData: Properti lain dari AsyncSnapshot yang menunjukkan apakah ada data baru dari stream atau tidak. Jika ada data baru, kondisi ini akan bernilai true. Data tersebut bisa diakses melalui snapshot.data.
+
+- Center Widget dengan Text: Jika snapshot memiliki data, maka akan mengembalikan widget Text di tengah layar dengan teks yang merepresentasikan data yang diterima dari stream. Teks diambil dari snapshot.data.toString() dan ditampilkan dengan ukuran font 96.
+
+- SizedBox.shrink(): Jika tidak ada data yang diterima dari stream, maka akan mengembalikan widget SizedBox yang memiliki ukuran nol.
+
+Dengan menggunakan StreamBuilder akan secara otomatis memperbarui UI sesuai dengan data yang diterima dari stream, memastikan bahwa UI selalu menampilkan informasi terkini dari stream yang dimonitor.
