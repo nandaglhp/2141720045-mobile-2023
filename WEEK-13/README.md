@@ -128,3 +128,11 @@ terdapat operasi kondisional. Jika stream controller (numberStreamController) be
   Jika stream controller sudah ditutup, maka kondisi else akan dieksekusi:
 
 - setState(() { lastNumber = -1; });: Mengeset nilai variabel lastNumber menjadi -1. Ini karena stream controller telah ditutup, sehingga tidak dapat menambahkan bilangan baru ke dalam stream.
+
+Soal 10:
+
+![](/WEEK-13/docs/error.png)
+
+Jelaskan mengapa error itu bisa terjadi ?
+
+Error "bad state: Stream has already been listened to" terjadi karena pada bagian inisialisasi subscription dan subscription2, kedua objek StreamSubscription tersebut mendengarkan stream yang sama, yaitu stream yang berasal dari numberStreamController.stream. Ini menyebabkan konflik karena sebuah stream hanya dapat didengarkan oleh satu subscription pada satu waktu. Ketika membuat subscription2 dengan stream yang sama tanpa menutup subscription pertama, error terjadi karena stream telah memiliki subscription aktif yang sudah mendengarkannya sebelumnya.
