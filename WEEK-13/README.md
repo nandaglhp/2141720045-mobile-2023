@@ -136,3 +136,13 @@ Soal 10:
 Jelaskan mengapa error itu bisa terjadi ?
 
 Error "bad state: Stream has already been listened to" terjadi karena pada bagian inisialisasi subscription dan subscription2, kedua objek StreamSubscription tersebut mendengarkan stream yang sama, yaitu stream yang berasal dari numberStreamController.stream. Ini menyebabkan konflik karena sebuah stream hanya dapat didengarkan oleh satu subscription pada satu waktu. Ketika membuat subscription2 dengan stream yang sama tanpa menutup subscription pertama, error terjadi karena stream telah memiliki subscription aktif yang sudah mendengarkannya sebelumnya.
+
+Soal 11:
+
+![](/WEEK-13/docs/soal11.gif)
+
+Jelaskan mengapa hal itu bisa terjadi ?
+
+Hal ini terjadi karena pada saat inisialisasi, dua buah subscription dibuat pada Stream.listen:
+
+Kedua subscription tersebut akan menambahkan nilai angka ke dalam string values ketika event dari stream diterima. Ketika tombol 'New Random Number' ditekan, addRandomNumber() dipanggil dan nilai acak baru ditambahkan ke numberStream. Ini menyebabkan dua langganan tersebut menerima event dari stream dan keduanya akan memperbarui nilai values. Oleh karena itu, setiap kali tombol 'New Random Number' ditekan, setiap langganan akan menambahkan nilai angka ke dalam values, mengakibatkan tampilannya bertambah dua kali lipat dari seharusnya.
