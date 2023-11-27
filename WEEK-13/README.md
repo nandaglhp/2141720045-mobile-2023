@@ -1,6 +1,4 @@
-# Praktikum 1
-
-Soal 3:
+# Soal 3:
 
 1. Jelaskan fungsi keyword yield\* pada kode tersebut!!
 
@@ -20,17 +18,17 @@ Implementasi dari kelas ColorStream. Kelas ini memiliki beberapa fungsi dan prop
 
 - Stream.periodic: Membuat stream yang mengeluarkan nilai secara periodik berdasarkan interval waktu yang ditentukan.
 
-Soal 4:
+# Soal 4:
 
 ![](/WEEK-13/docs/soal4.gif)
 
-Soal 5:
+# Soal 5:
 
 Perbedaan utama antara listen dan await for adalah bahwa listen digunakan untuk menangani data dari Stream secara real time, sedangkan await for untuk menunggu secara asinkron untuk data baru dari Stream.
 
 Secara umum, listen digunakan jika ingin menangani data dari Stream secara real time. Lalu menggunakan await for jika ingin menunggu secara asinkron untuk data baru dari Stream.
 
-Soal 6:
+# Soal 6:
 
 ![](/WEEK-13/docs/soal6.gif)
 
@@ -49,7 +47,7 @@ Metode addRandomNumber() untuk menambahkan angka acak baru ke NumberStream. Dala
 - Membuat objek Random dan menghasilkan angka acak.
 - Memanggil metode addNumberToSink() pada NumberStream untuk menambahkan angka acak ke Stream.
 
-Soal 7:
+# Soal 7:
 
 ![](/WEEK-13/docs/soal7.png)
 
@@ -69,7 +67,7 @@ Komentar "// int myNum = random.nextInt(10);" digunakan untuk menunjukkan bahwa 
 
 Metode numberStream.addError() digunakan untuk menambahkan kesalahan ke Stream.
 
-soal 8:
+# soal 8:
 
 ![](/WEEK-13/docs/soal8.gif)
 
@@ -98,7 +96,7 @@ Untuk mengambil nilai dari stream, mengubahnya menggunakan transformer, dan memp
 
 Perbedaan utama antara menggunakan stream.transform().listen() dan stream.listen() adalah bahwa dengan menggunakan transform() dapat menerapkan transformasi data sebelum data tersebut disalurkan ke listen(). Ini memungkinkan untuk mengubah atau memanipulasi data yang diterima sebelum menggunakan atau menampilkan data.
 
-Soal 9:
+# Soal 9:
 
 ![](/WEEK-13/docs/soal9.gif)
 
@@ -129,7 +127,7 @@ terdapat operasi kondisional. Jika stream controller (numberStreamController) be
 
 - setState(() { lastNumber = -1; });: Mengeset nilai variabel lastNumber menjadi -1. Ini karena stream controller telah ditutup, sehingga tidak dapat menambahkan bilangan baru ke dalam stream.
 
-Soal 10:
+# Soal 10:
 
 ![](/WEEK-13/docs/error.png)
 
@@ -137,7 +135,7 @@ Jelaskan mengapa error itu bisa terjadi ?
 
 Error "bad state: Stream has already been listened to" terjadi karena pada bagian inisialisasi subscription dan subscription2, kedua objek StreamSubscription tersebut mendengarkan stream yang sama, yaitu stream yang berasal dari numberStreamController.stream. Ini menyebabkan konflik karena sebuah stream hanya dapat didengarkan oleh satu subscription pada satu waktu. Ketika membuat subscription2 dengan stream yang sama tanpa menutup subscription pertama, error terjadi karena stream telah memiliki subscription aktif yang sudah mendengarkannya sebelumnya.
 
-Soal 11:
+# Soal 11:
 
 ![](/WEEK-13/docs/soal11.gif)
 
@@ -147,7 +145,7 @@ Hal ini terjadi karena pada saat inisialisasi, dua buah subscription dibuat pada
 
 Kedua subscription tersebut akan menambahkan nilai angka ke dalam string values ketika event dari stream diterima. Ketika tombol 'New Random Number' ditekan, addRandomNumber() dipanggil dan nilai acak baru ditambahkan ke numberStream. Ini menyebabkan dua langganan tersebut menerima event dari stream dan keduanya akan memperbarui nilai values. Oleh karena itu, setiap kali tombol 'New Random Number' ditekan, setiap langganan akan menambahkan nilai angka ke dalam values, mengakibatkan tampilannya bertambah dua kali lipat dari seharusnya.
 
-Soal 12:
+# Soal 12:
 
 ![](/WEEK-13/docs/soal12.gif)
 
@@ -182,3 +180,49 @@ Penjelasan langkah 7:
 - SizedBox.shrink(): Jika tidak ada data yang diterima dari stream, maka akan mengembalikan widget SizedBox yang memiliki ukuran nol.
 
 Dengan menggunakan StreamBuilder akan secara otomatis memperbarui UI sesuai dengan data yang diterima dari stream, memastikan bahwa UI selalu menampilkan informasi terkini dari stream yang dimonitor.
+
+# Soal 13:
+
+![](/WEEK-13/docs/soal13.gif)
+
+Penjelasan kode :
+
+- File main.dart:
+
+  - Mendefinisikan kelas MyApp yang merupakan turunan dari StatelessWidget. Kelas ini adalah tampilan utama dari aplikasi (MaterialApp) yang menentukan tema, seperti warna, font, dan halaman pertama yang akan ditampilkan.
+
+  - Mendefinisikan kelas MyHomePage yang merupakan turunan dari StatefulWidget. Kelas ini merepresentasikan halaman utama aplikasi yang memiliki fungsi untuk menghitung jumlah kali tombol ditekan dan menampilkannya di layar.
+
+- File random_bloc.dart:
+
+  - mengandung kelas RandomNumberBloc yang merupakan bagian dari manajemen state menggunakan BLoC (Business Logic Component)
+
+  - Membuat dan mengelola dua StreamController: \_generateRandomController untuk menerima perintah menghasilkan angka acak, dan \_randomNumberController untuk mengirimkan angka acak ke dalam aliran data (stream).
+
+  - Ketika event diterima melalui \_generateRandomController.stream, kelas ini menghasilkan angka acak antara 0 hingga 9 dan mengirimkannya ke dalam \_randomNumberController.sink.
+
+  - Fungsi dispose() digunakan untuk menutup kedua StreamController dan mencegah kebocoran memori.
+
+- File random_screen.dart:
+
+  - berisi kelas RandomScreen yang merupakan StatefulWidget untuk menampilkan angka acak dari RandomNumberBloc
+
+  - Membuat objek RandomNumberBloc pada saat inisialisasi dan menutupnya dengan baik menggunakan fungsi dispose() saat widget tidak lagi diperlukan.
+
+  - Menampilkan angka acak yang diterima dari Stream<int> yang berasal dari \_bloc.randomNumber dengan menggunakan StreamBuilder.Memungkinkan tampilan untuk diperbarui secara otomatis setiap kali ada data baru dari RandomNumberBloc.
+
+  - Tombol refresh (FloatingActionButton) memicu pengiriman event ke \_bloc.generateRandom saat ditekan, sehingga memulai proses penghasilan angka acak baru.
+
+Secara keseluruhan, kombinasi dari ketiga file ini menunjukkan bagaimana Flutter memanfaatkan manajemen state menggunakan BLoC untuk mengelola dan menampilkan data secara dinamis di antarmuka pengguna (UI) aplikasi Flutter.
+
+Dimanakah letak konsep pola BLoC-nya ?
+
+Konsep pola BLoC (Business Logic Component) terdapat dalam file random_bloc.dart dan diimplementasikan dalam kelas RandomNumberBloc.
+
+- Sink dan Stream Controller: Dalam pola BLoC, terdapat Sink sebagai input dan Stream sebagai output. Dalam praktikum, \_generateRandomController merupakan Sink yang menerima perintah untuk menghasilkan angka acak, sedangkan \_randomNumberController merupakan Stream yang mengirimkan angka acak ke tampilan.
+
+- Pemisahan Logika Bisnis: Pola BLoC menerapkan prinsip pemisahan antara logika bisnis dari antarmuka pengguna (UI). Kelas RandomNumberBloc bertanggung jawab sepenuhnya untuk logika bisnis terkait penghasilan angka acak, tanpa terikat langsung dengan tampilan atau UI.
+
+- Event Sink dan Data Stream: Penggunaan Sink dan Stream memungkinkan komunikasi dua arah. Sink digunakan untuk mengirimkan event (misalnya, permintaan untuk menghasilkan angka acak), sementara Stream mengirimkan data (hasil angka acak) ke widget yang terhubung.
+
+- Pembersihan Memori (Memory Cleanup): Prinsip pembersihan memori penting dalam pola BLoC. Fungsi dispose() yang ada di kelas RandomNumberBloc digunakan untuk menutup StreamController secara aman guna mencegah kebocoran memori.
