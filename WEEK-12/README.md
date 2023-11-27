@@ -26,6 +26,8 @@ Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
 
 2. catchError(_) {...}: Bagian ini merupakan bagian dari metode yang menggunakan fungsi getData(). Di sini, catchError() digunakan untuk menangani kesalahan (error) yang mungkin terjadi saat menjalankan fungsi getData(). Jika terjadi kesalahan selama eksekusi getData(), _ (underscore) adalah variabel yang menangkap atau mewakili error yang terjadi (biasanya disebut sebagai parameter error). Dalam kasus ini, ketika ada kesalahan, variabel result akan diisi dengan pesan 'An error occurred', dan tampilan akan diperbarui dengan pesan tersebut menggunakan setState() agar UI dapat menampilkan informasi bahwa terjadi kesalahan dalam pengambilan data.
 
+# Praktikum 2
+
 Soal 4 :
 
 Kode langkah 1 dan 2 yang diberikan bertujuan untuk menambahkan beberapa metode di dalam class \_FuturePageState yang terkait dengan penggunaan Future dan async-await di Flutter.
@@ -41,3 +43,5 @@ Setelah mendapatkan nilai dari ketiga metode tersebut, nilai-nilai tersebut dita
 Kemudian, nilai total diubah menjadi string dan diatur sebagai nilai dari variabel result.
 setState() digunakan untuk memperbarui tampilan UI sesuai dengan nilai yang dihitung.
 Kedua langkah tersebut bertujuan untuk menyiapkan dan mengatur logika pemrosesan asinkron di dalam aplikasi Flutter. Dengan cara ini, ketika metode count() dipanggil, ia akan menunggu hasil dari beberapa metode asinkron lainnya, kemudian menghitung nilai total dan memperbarui tampilan aplikasi sesuai dengan nilai yang dihasilkan.
+
+# Praktikum 3
