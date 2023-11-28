@@ -94,3 +94,11 @@ Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
 ![](/WEEK-12/docs/praktikum-01/soal12_chrome.png)
 
 bisa, karena saya mengizinkan akses lokasi pada chrome.
+
+Soal 13:
+
+Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+Sekilas dalam tampilan tidak terlihat perbedaan. Bedanya hanya terletak pada tidak ada permintaan izin lokasi karena tidak menggunakan requestPermission()
+
+![](/WEEK-12/docs/praktikum-01/soal13.gif)
