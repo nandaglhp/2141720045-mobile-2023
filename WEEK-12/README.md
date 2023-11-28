@@ -75,3 +75,12 @@ Perbedaan utama antara keduanya adalah metode yang digunakan untuk mengelola beb
 Soal 9:
 
 ![](/WEEK-12/docs/praktikum-01/saol9.gif)
+
+Soal 10:
+
+![](/WEEK-12/docs/praktikum-01/soal10.gif)
+
+Jelaskan perbedaan kode langkah 1 dan 4!
+
+- returnError digunakan untuk membuat sebuah Future yang secara langsung melempar error.
+- handleError adalah fungsi yang menggunakan try, catch, dan finally untuk menangani error yang dihasilkan dari pemanggilan returnError dan melakukan aksi tertentu (mengubah nilai result dan mencetak pesan di konsol) sesuai dengan kondisi error yang terjadi.
