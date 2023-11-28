@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,19 @@ class _FuturePageState extends State<FuturePage> {
     const path = '/books/v1/volumes/jFFFDwAAQBAJ';
     Uri url = Uri.https(authority, path);
     return http.get(url);
+  }
+
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer<int>();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
   }
 
   Future<int> returnOneAsync() async {
@@ -77,7 +91,12 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text('GO!'),
               onPressed: () {
-                count();
+                getNumber().then((value) {
+                  setState(() {
+                    result = value.toString();
+                  });
+                });
+                // count();
               },
             ),
             const Spacer(),

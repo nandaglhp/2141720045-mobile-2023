@@ -50,7 +50,7 @@ Kedua langkah tersebut bertujuan untuk menyiapkan dan mengatur logika pemrosesan
 
 Soal 5:
 
-![](/WEEK-12/docs/praktikum-01/soal5.png)
+![](/WEEK-12/docs/praktikum-01/soal5.gif)
 
 Penjelasan kode langkah 2:
 
