@@ -53,3 +53,9 @@ Soal 5:
 Penjelasan kode langkah 2:
 
 cara menggunakan Completer untuk membuat Future secara manual. Completer digunakan untuk mengontrol dan menyelesaikan sebuah Future saat suatu operasi asinkron selesai dilakukan, dalam hal ini simulasi penundaan selama 5 detik sebelum nilai 42 disampaikan sebagai hasil Future.
+
+Soal 6:
+
+![](/WEEK-12/docs/praktikum-01/soal6.gif)
+
+Perbedaan yang signifikan antara langkah 2 dan langkah 5-6 terletak pada penanganan error menggunakan blok try dan catch. Jika pada langkah 2 terdapat langkah untuk menyelesaikan Future dengan memberikan nilai, pada langkah 5-6 terdapat penanganan error dengan menetapkan status error. Pada langkah 6, ketika getNumber() mengalami error, nilai variabel result akan diatur sebagai 'An error occurred', bukan nilai dari Future yang dihasilkan.
