@@ -102,3 +102,11 @@ Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
 Sekilas dalam tampilan tidak terlihat perbedaan. Bedanya hanya terletak pada tidak ada permintaan izin lokasi karena tidak menggunakan requestPermission()
 
 ![](/WEEK-12/docs/praktikum-01/soal13.gif)
+
+Soal 14:
+
+![](/WEEK-12/docs/praktikum-01/soal4.gif)
+
+Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+
+tidak ada perbedaan dalam UI. Karena tidak terdapat error pada aplikasi, jadi tidak ada error yang dimunculkan.
