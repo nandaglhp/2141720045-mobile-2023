@@ -84,3 +84,13 @@ Jelaskan perbedaan kode langkah 1 dan 4!
 
 - returnError digunakan untuk membuat sebuah Future yang secara langsung melempar error.
 - handleError adalah fungsi yang menggunakan try, catch, dan finally untuk menangani error yang dihasilkan dari pemanggilan returnError dan melakukan aksi tertentu (mengubah nilai result dan mencetak pesan di konsol) sesuai dengan kondisi error yang terjadi.
+
+Soal 12:
+
+![](/WEEK-12/docs/praktikum-01/soal12.gif)
+
+Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+![](/WEEK-12/docs/praktikum-01/soal12_chrome.png)
+
+bisa, karena saya mengizinkan akses lokasi pada chrome.
