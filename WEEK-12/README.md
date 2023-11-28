@@ -45,3 +45,11 @@ setState() digunakan untuk memperbarui tampilan UI sesuai dengan nilai yang dihi
 Kedua langkah tersebut bertujuan untuk menyiapkan dan mengatur logika pemrosesan asinkron di dalam aplikasi Flutter. Dengan cara ini, ketika metode count() dipanggil, ia akan menunggu hasil dari beberapa metode asinkron lainnya, kemudian menghitung nilai total dan memperbarui tampilan aplikasi sesuai dengan nilai yang dihasilkan.
 
 # Praktikum 3
+
+Soal 5:
+
+![](/WEEK-12/docs/praktikum-01/soal5.png)
+
+Penjelasan kode langkah 2:
+
+cara menggunakan Completer untuk membuat Future secara manual. Completer digunakan untuk mengontrol dan menyelesaikan sebuah Future saat suatu operasi asinkron selesai dilakukan, dalam hal ini simulasi penundaan selama 5 detik sebelum nilai 42 disampaikan sebagai hasil Future.
