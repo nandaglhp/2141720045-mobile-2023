@@ -65,3 +65,9 @@ Perbedaan yang signifikan antara langkah 2 dan langkah 5-6 terletak pada penanga
 Soal 7:
 
 ![](/WEEK-12/docs/praktikum-01/soal7.gif)
+
+Soal 8:
+
+Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+Perbedaan utama antara keduanya adalah metode yang digunakan untuk mengelola beberapa Future. FutureGroup digunakan khusus untuk mengelola beberapa Future secara terpisah dengan kemampuan untuk menambahkan dan menutup grup, sementara Future.wait digunakan untuk menunggu beberapa Future sekaligus dan mendapatkan hasilnya dalam sebuah list tunggal.
