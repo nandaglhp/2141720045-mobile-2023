@@ -30,6 +30,8 @@ Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
 
 Soal 4 :
 
+![](/WEEK-12/docs/praktikum-01/soal4.gif)
+
 Kode langkah 1 dan 2 yang diberikan bertujuan untuk menambahkan beberapa metode di dalam class \_FuturePageState yang terkait dengan penggunaan Future dan async-await di Flutter.
 
 Langkah 1:
