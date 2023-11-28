@@ -110,3 +110,9 @@ Soal 14:
 Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
 
 tidak ada perbedaan dalam UI. Karena tidak terdapat error pada aplikasi, jadi tidak ada error yang dimunculkan.
+
+Soal 16:
+
+![](/WEEK-12/docs/praktikum-01/soal16.gif)
+
+Pertama muncul Page "Navigation First Screen". Lalu tekan "change color" akan ditujukan pada page "Navigation Second Screen" yang mana terdapat 3 button. Masing-masing jika diklik akan merubah warna background. Ini terjadi karena perubahan state color yang dilakukan pada ElevatedButton, lalu color akan dikirim ke Page "Navigation First Screen" untuk warna background.
